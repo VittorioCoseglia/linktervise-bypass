@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Linkvertise Bypass</title>
+    <!-- BOOTSTRAP 4 CDN -->
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/753339653339349042/da99963be5c46ca82671c403ec543db0.webp?size=1024" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+
+  
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('home') }}">Flask App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('code') }}">Code of website</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('Supportedlinks') }}">Supported links</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+
+    <div class="container p-4">
+      {% block content %}
+      {% endblock%}
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>
