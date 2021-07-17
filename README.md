@@ -1,2 +1,10 @@
-# linktervise-bypass
-This is a bypass  website code for linktervise and others 
+
+## Installation
+
+```bash
+pip install flask
+```
+
+## Usage
+
+Click on index.py and enter to local host
